@@ -5,7 +5,8 @@
   "scripts": {
     "test": "mocha --recursive --compilers js:babel-register --require ./test/setup.js",
     "webpack:prod": "webpack --config ./webpack.config.prod.js",
-    "webpack": "webpack --progress --colors --watch"
+    "webpack": "webpack --progress --colors --watch",
+    "server": "node server.js"
   },
   "dependencies": {
     "babel-polyfill": "^6.9.1",
