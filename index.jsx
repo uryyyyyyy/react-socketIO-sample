@@ -4,7 +4,7 @@ import EmitButton from './src/EmitButton'
 import EventList from './src/EventList'
 
 import io from 'socket.io-client'
-let socket = io(`http://localhost:3000`);
+let socket = io();
 
 export default class Route extends React.Component {
 
