@@ -1,9 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import EmitButton from './src/EmitButton'
-import EventList from './src/EventList'
-
-import io from 'socket.io-client'
+import React from "react";
+import ReactDOM from "react-dom";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import EmitButton from "./src/EmitButton";
+import EventList from "./src/EventList";
+import io from "socket.io-client";
 let socket = io();
 
 export default class Route extends React.Component {
@@ -18,4 +19,11 @@ export default class Route extends React.Component {
   }
 }
 
-ReactDOM.render(<Route />, document.getElementById('root'));
+ReactDOM.render(
+  <MuiThemeProvider muiTheme={getMuiTheme()} >
+    <Route />
+  </MuiThemeProvider>,
+  document.getElementById('root'));
+
+// var s = new Sound();
+// s.play();

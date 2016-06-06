@@ -1,5 +1,6 @@
 import React from "react";
-import Sound from './Sound'
+import Sound from "./Sound";
+import FlatButton from "material-ui/FlatButton";
 
 export default class Home extends React.Component {
 
@@ -21,9 +22,9 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.emitSocket(this.props)}>Emit</button>
-        <button onClick={() => this.emitSocket2(this.props)}>Emit BroadCase</button>
-        <button onClick={() => this.sound()}>Sound</button>
+        <FlatButton label="Emit" primary={true} onMouseDown={() => this.emitSocket(this.props)} />
+        <FlatButton label="Emit BroadCast" primary={true} onMouseDown={() => this.emitSocket2(this.props)} />
+        <FlatButton label="Sound" primary={true} onMouseDown={() => this.sound()} />
       </div>
     )
   }
