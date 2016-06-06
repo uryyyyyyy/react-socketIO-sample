@@ -8,7 +8,7 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
-    this.props.socket.on('normal response', function (data) {
+    this.props.socket.on('normal response', (data) => {
       window.alert(data.name)
     });
 
