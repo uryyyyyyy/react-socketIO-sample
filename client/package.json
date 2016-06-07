@@ -16,7 +16,8 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "socket.io": "^1.4.6",
-    "socket.io-client": "^1.4.6"
+    "socket.io-client": "^1.4.6",
+    "websocket": "^1.0.23"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",

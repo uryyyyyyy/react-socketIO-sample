@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default class Home extends React.Component {
 
@@ -7,13 +7,14 @@ export default class Home extends React.Component {
     this.state = { text: 'default' }
   }
 
-  componentDidMount() {
-    this.props.socket.on('normal response', (data) => {
-      window.alert(data.name)
-    });
+  // socket.onmessage = function(e) {
+  //   console.log("receive message: " + e.data);
+  // };
 
-    this.props.socket.on('broadcast response', (data) => {
-      window.alert(data.name);
+
+  componentDidMount() {
+    this.props.socket.onmessage = (data => {
+      window.alert(data.data)
       this.setState({text: "changed"})
     });
   }
