@@ -4,8 +4,14 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import EmitButton from "./src/EmitButton";
 import EventList from "./src/EventList";
-import io from "socket.io-client";
-let socket = io();
+// import io from "socket.io-client";
+// let socket = io();
+
+const socket = new WebSocket('ws://localhost:8080/chat?name=someone');
+
+socket.onopen = function(e) {
+  console.log("socket open!");
+}
 
 export default class Route extends React.Component {
 
@@ -24,6 +30,3 @@ ReactDOM.render(
     <Route />
   </MuiThemeProvider>,
   document.getElementById('root'));
-
-// var s = new Sound();
-// s.play();

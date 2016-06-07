@@ -6,12 +6,12 @@ export default class Home extends React.Component {
 
   emitSocket(props){
     console.log("normal button clicked");
-    props.socket.emit('normal request')
+    props.socket.send('normal')
   }
 
   emitSocket2(props){
     console.log("broadcast button clicked");
-    props.socket.emit('broadcast request')
+    props.socket.send('broadcast request')
   }
 
   sound() {
